@@ -48,11 +48,11 @@ User Request (Lat,Lon) ➡️ **Node.js API** (Validation & Transformation) ➡�
 
 # Output Screenshots
 
-### Initial Map View
+### Response Output in MapView
 
 ![Output in MapView](./screenshots/output-mapview.png)
 
-### Initial Map View
+### Request and Response Output
 
 ![Output Geojson](./screenshots/output-geojson.png)
 
@@ -100,7 +100,6 @@ Parameter | Type | Required | Description | Format |
 | ------- | ---- | -------- | ----------- | ------ |
 `start` | string | Yes | Starting point coordinates | Lat,Lon (e.g., 33.6844,73.0479) |
 `end` | string | Yes | Destination coordinates | Lat,Lon (e.g., 33.7000,73.0500) |
-| ------- | ---- | -------- | ----------- | ------ |
 
 **Sample Request:**
 
@@ -187,7 +186,7 @@ const response = await axios.get(orsUrl, {
 
 The entire logic is wrapped in a `try/catch` block. If the external routing service fails (e.g., unreachable server, invalid key), our API catches the error and returns a clean `500` status code instead of crashing.
 
-**Deployment**
+### Deployment
 
 Render is the new industry standard for free Node.js hosting. It connects to your GitHub and looks very professional.
 
